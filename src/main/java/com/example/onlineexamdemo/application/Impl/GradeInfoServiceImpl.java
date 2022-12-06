@@ -20,23 +20,28 @@ public class GradeInfoServiceImpl implements GradeInfoService {
 
 	@Autowired
 	private GradeInfoRes gradeInfoRes;
-	
+
+	@Override
 	public List<GradeInfo> getGrades() {
 		return gradeInfoRes.getGrades();
 	}
 
+	@Override
 	public int isAddGrade(GradeInfo grade) {
 		return gradeInfoRes.isAddGrade(grade);
 	}
 
+	@Override
 	public int isDelGrade(int gradeId) {
 		return gradeInfoRes.isDelGrade(gradeId);
 	}
 
+	@Override
 	public int isUpdateGrade(GradeInfo grade) {
 		return gradeInfoRes.isUpdateGrade(grade);
 	}
 
+	@Override
 	public GradeInfo getGradeById(int gradeId) {
 		return gradeInfoRes.getGradeById(gradeId);
 	}

@@ -12,7 +12,6 @@ import java.util.List;
   * @version: 1.0
   */
 
-@Repository
 public interface GradeInfoService {
 
 	//获取所有年级
