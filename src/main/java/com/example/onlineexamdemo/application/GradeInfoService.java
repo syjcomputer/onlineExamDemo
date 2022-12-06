@@ -1,10 +1,9 @@
-package com.taohan.online.exam.service;
+package com.example.onlineexamdemo.application;
 
-import java.util.List;
-
+import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
 import org.springframework.stereotype.Repository;
 
-import com.taohan.online.exam.po.GradeInfo;
+import java.util.List;
 
 /**
   *

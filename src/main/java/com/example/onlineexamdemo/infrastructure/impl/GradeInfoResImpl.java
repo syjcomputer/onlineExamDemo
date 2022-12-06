@@ -1,5 +1,8 @@
-package com.example.onlineexamdemo.infrastructure;
+package com.example.onlineexamdemo.infrastructure.impl;
 
+import com.example.onlineexamdemo.infrastructure.mapper.GradeInfoMapper;
+import com.example.onlineexamdemo.infrastructure.GradeInfoRes;
+import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

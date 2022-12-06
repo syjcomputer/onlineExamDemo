@@ -1,6 +1,6 @@
 package com.example.onlineexamdemo.infrastructure;
 
-import org.springframework.stereotype.Repository;
+import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
   * @version: 1.0
   */
 
-public interface GradeInfoMapper {
+public interface GradeInfoRes {
 
 	//获取所有年级
 	public List<GradeInfo> getGrades();

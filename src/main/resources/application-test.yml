@@ -6,13 +6,13 @@ server:
 
 spring:
   application:
-    name: onlinedoc-backend
+    name: online_exam-backend
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: onlinedoc
-    password: 123456
-    url: jdbc:mysql://localhost:3306/onlinedoc_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: online_exam
+    password: 12345
+    url: jdbc:mysql://localhost:3306/online_exam?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     hikari:
       # 池中维护的最小空闲连接数，默认为 10 个
       minimum-idle: 10
@@ -47,6 +47,9 @@ spring:
 
   #  下面这个mvc和web配置，是为了使请求不存在的url时，能够按照通用返回模板返回（在全局异常处理器捕获NoHandlerFoundException即可）
   mvc:
+    view:
+      prefix: /admin/
+      suffix: .jsp
     throw-exception-if-no-handler-found: true
   web:
     resources:
@@ -54,7 +57,7 @@ spring:
 
 #  mapper对应的xml文件存放路径，开启 mybatis 下划线命名法自动到驼峰命名法映射
 mybatis-plus:
-  mapper-locations: classpath*:edu/nwpu/onlinedoc/infrastructure/*/persistence/mysql/mapper/xml/*.xml
+  mapper-locations: classpath*:com/example/onlineexamdemo/infrastructure/xml/*.xml
   configuration:
     map-underscore-to-camel-case: true
   global-config:

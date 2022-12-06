@@ -1,13 +1,12 @@
-package com.taohan.online.exam.service.impl;
+package com.example.onlineexamdemo.application.Impl;
 
-import java.util.List;
-
+import com.example.onlineexamdemo.application.GradeInfoService;
+import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
+import com.example.onlineexamdemo.infrastructure.GradeInfoRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.taohan.online.exam.dao.GradeInfoMapper;
-import com.taohan.online.exam.po.GradeInfo;
-import com.taohan.online.exam.service.GradeInfoService;
+import java.util.List;
 
 /**
   *
@@ -20,26 +19,26 @@ import com.taohan.online.exam.service.GradeInfoService;
 public class GradeInfoServiceImpl implements GradeInfoService {
 
 	@Autowired
-	private GradeInfoMapper gradeInfoMapper;
+	private GradeInfoRes gradeInfoRes;
 	
 	public List<GradeInfo> getGrades() {
-		return gradeInfoMapper.getGrades();
+		return gradeInfoRes.getGrades();
 	}
 
 	public int isAddGrade(GradeInfo grade) {
-		return gradeInfoMapper.isAddGrade(grade);
+		return gradeInfoRes.isAddGrade(grade);
 	}
 
 	public int isDelGrade(int gradeId) {
-		return gradeInfoMapper.isDelGrade(gradeId);
+		return gradeInfoRes.isDelGrade(gradeId);
 	}
 
 	public int isUpdateGrade(GradeInfo grade) {
-		return gradeInfoMapper.isUpdateGrade(grade);
+		return gradeInfoRes.isUpdateGrade(grade);
 	}
 
 	public GradeInfo getGradeById(int gradeId) {
-		return gradeInfoMapper.getGradeById(gradeId);
+		return gradeInfoRes.getGradeById(gradeId);
 	}
 
 }

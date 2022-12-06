@@ -1,20 +1,21 @@
-package com.taohan.online.exam.handler;
+package com.example.onlineexamdemo.api;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.log4j.Logger;
+import com.example.onlineexamdemo.application.GradeInfoService;
+import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
+import com.google.gson.Gson;
+//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.google.gson.Gson;
-import com.taohan.online.exam.po.GradeInfo;
-import com.taohan.online.exam.service.GradeInfoService;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 /**
   *
@@ -23,6 +24,7 @@ import com.taohan.online.exam.service.GradeInfoService;
   * @version: 1.0
   */
 
+//@RestController
 @Controller
 public class GradeInfoHandler {
 
@@ -32,7 +34,7 @@ public class GradeInfoHandler {
 	@Autowired
 	private GradeInfoService gradeInfoService;
 	
-	private Logger logger = Logger.getLogger(GradeInfoHandler.class);
+	//private Logger logger = Logger.getLogger(GradeInfoHandler.class);
 	
 	/**
 	 * 获取所有年级集合
@@ -40,7 +42,7 @@ public class GradeInfoHandler {
 	 */
 	@RequestMapping(value="/grades")
 	public ModelAndView getGrades() {
-		logger.info("获取所有年级");
+		//logger.info("获取所有年级");
 		
 		ModelAndView model = new ModelAndView();
 		model.setViewName("admin/grades");
@@ -59,7 +61,7 @@ public class GradeInfoHandler {
 	 */
 	@RequestMapping("/preAddGrade")
 	public String preAddGrade(Map<String, Object> map) {
-		logger.info("年级添加预处理");
+		//logger.info("年级添加预处理");
 		
 		map.put("grade", new GradeInfo());
 		
@@ -74,17 +76,17 @@ public class GradeInfoHandler {
 	 */
 	@RequestMapping(value="/grade", method=RequestMethod.POST)
 	public String isAddGrade(GradeInfo grade, HttpServletRequest request) {
-		logger.info("添加年级 "+grade);
+		//logger.info("添加年级 "+grade);
 
 		if (grade == null) {
-			logger.error("年级 "+grade+" 为空");
+			//logger.error("年级 "+grade+" 为空");
 			
 			request.setAttribute("error", "年级添加失败，请稍后再试！");
 			return "error";
 		}
 		int row = gradeInfoService.isAddGrade(grade);
 		if (row < 1) {
-			logger.error("年级添加失败");
+			//logger.error("年级添加失败");
 			
 			request.setAttribute("error", "年级添加失败，请稍后再试！");
 			return "error";
@@ -102,7 +104,7 @@ public class GradeInfoHandler {
 	@RequestMapping(value="/grade/update/{gradeId}", method=RequestMethod.GET)
 	public String preUpdateGrade(@PathVariable("gradeId") Integer gradeId,
 			Map<String, Object> map) {
-		logger.info("年级修改预处理");
+		//logger.info("年级修改预处理");
 		
 		map.put("grade", gradeInfoService.getGradeById(gradeId));
 		
@@ -117,11 +119,11 @@ public class GradeInfoHandler {
 	 */
 	@RequestMapping(value="/grade/update/grade", method=RequestMethod.PUT)
 	public String isUpdateGrade(GradeInfo grade, HttpServletRequest request) {
-		logger.info("修改年级 "+grade+" 的信息");
+		//logger.info("修改年级 "+grade+" 的信息");
 		
 		int row = gradeInfoService.isUpdateGrade(grade);
 		if (row < 1) {
-			logger.error("年级修改失败");
+			//logger.error("年级修改失败");
 			
 			request.setAttribute("error", "年级修改失败，请稍后再试！");
 			return "/error";
@@ -138,11 +140,11 @@ public class GradeInfoHandler {
 	 */
 	@RequestMapping(value="grade/del/{gradeId}", method=RequestMethod.DELETE)
 	public String isDelGrade(@PathVariable("gradeId") Integer gradeId, HttpServletRequest request) {
-		logger.info("删除年级 "+gradeId);
+		//logger.info("删除年级 "+gradeId);
 		
 		int row = gradeInfoService.isDelGrade(gradeId);
 		if (row < 1) {
-			logger.error("年级删除失败");
+			//logger.error("年级删除失败");
 			
 			request.setAttribute("error", "年级删除失败，请稍后再试！");
 			return "/error";

@@ -1,4 +1,4 @@
-package com.example.onlineexamdemo.infrastructure;
+package com.example.onlineexamdemo.infrastructure.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;

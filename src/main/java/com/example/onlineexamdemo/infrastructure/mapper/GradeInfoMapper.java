@@ -1,5 +1,6 @@
-package com.example.onlineexamdemo.infrastructure;
+package com.example.onlineexamdemo.infrastructure.mapper;
 
+import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Mapper;
 
