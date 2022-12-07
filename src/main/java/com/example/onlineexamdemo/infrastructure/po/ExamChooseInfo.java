@@ -7,22 +7,28 @@ import org.springframework.stereotype.Component;
 
 /**
   *
-  * <p>Title: ExamSubjectMiddleInfo</p>
-  * <p>Description: 试卷、试题中间关联表</p>
+  * <p>Title: ExamChooseInfo</p>
+  * <p>Description: 考生考试选择答案信息</p>
   * @version: 1.0
   */
 
-@Data
 @Component
-public class ExamSubjectMiddleInfo {
+@Data
+public class ExamChooseInfo {
 
 	@TableField
-	private Integer esmId;
+	private Integer chooseId;
+
+	@TableField
+	private StudentInfo student;
 
 	@TableField
 	private ExamPaperInfo examPaper;
 
 	@TableField
 	private SubjectInfo subject;
+
+	@TableField
+	private String chooseResult;
 
 }
