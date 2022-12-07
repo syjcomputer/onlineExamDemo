@@ -1,6 +1,5 @@
 package com.example.onlineexamdemo.utils;
 
-import com.example.onlineexamdemo.infrastructure.po.SubjectInfo;
 import com.taohan.online.exam.po.CourseInfo;
 import com.taohan.online.exam.po.GradeInfo;
 import com.taohan.online.exam.po.SubjectInfo;
