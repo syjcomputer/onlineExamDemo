@@ -1,13 +1,15 @@
 package com.example.onlineexamdemo.application.Impl;
 
+import com.example.onlineexamdemo.application.StudentExamInfoService;
 import com.example.onlineexamdemo.infrastructure.StudentExamInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.StudentExamInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.StudentExamInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-public class StudentExamInfoServiceImpl implements StudentExamInfoRes {
+@Service
+public class StudentExamInfoServiceImpl implements StudentExamInfoService {
     @Autowired
     StudentExamInfoRes mapper;
     @Override

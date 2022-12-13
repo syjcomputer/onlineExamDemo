@@ -2,6 +2,7 @@ package com.example.onlineexamdemo.infrastructure.mapper;
 
 import com.example.onlineexamdemo.infrastructure.po.TeacherInfo;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Map;
   * @version: 1.0
   */
 
-@Repository
+@Mapper
 public interface TeacherInfoMapper {
 
 	//获取教师集合

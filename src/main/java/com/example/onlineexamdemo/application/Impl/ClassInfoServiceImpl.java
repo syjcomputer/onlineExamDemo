@@ -1,14 +1,16 @@
 package com.example.onlineexamdemo.application.Impl;
 
+import com.example.onlineexamdemo.application.ClassInfoService;
 import com.example.onlineexamdemo.infrastructure.ClassInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.ClassInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.ClassInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-
-public class ClassInfoServiceImpl implements ClassInfoRes {
+@Service
+public class ClassInfoServiceImpl implements ClassInfoService {
     @Autowired
     ClassInfoRes mapper;
 
