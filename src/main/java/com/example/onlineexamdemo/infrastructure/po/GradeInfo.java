@@ -22,6 +22,10 @@ public class GradeInfo {
 	@TableField
 	private String gradeName;
 
+	public GradeInfo(Integer gradeId) {
+
+	}
+
 //	public Integer getGradeId() {
 //		return gradeId;
 //	}
