@@ -1,10 +1,10 @@
 package com.example.onlineexamdemo.api;
 
+import com.example.onlineexamdemo.application.ClassInfoService;
+import com.example.onlineexamdemo.application.CourseInfoService;
 import com.example.onlineexamdemo.application.ExamPaperInfoService;
 import com.example.onlineexamdemo.application.ExamPlanInfoService;
-import com.example.onlineexamdemo.infrastructure.po.ExamPaperInfo;
-import com.example.onlineexamdemo.infrastructure.po.ExamPlanInfo;
-import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
+import com.example.onlineexamdemo.infrastructure.po.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;

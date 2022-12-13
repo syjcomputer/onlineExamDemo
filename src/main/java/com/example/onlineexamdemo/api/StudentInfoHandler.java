@@ -3,7 +3,7 @@ package com.example.onlineexamdemo.api;
 
 import com.example.onlineexamdemo.application.*;
 import com.example.onlineexamdemo.infrastructure.po.*;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

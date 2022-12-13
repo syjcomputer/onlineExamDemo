@@ -4,9 +4,11 @@ import com.example.onlineexamdemo.infrastructure.StudentExamInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.StudentExamInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.StudentExamInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StudentExamInfoServiceImpl implements StudentExamInfoRes {
     @Autowired
     StudentExamInfoRes mapper;

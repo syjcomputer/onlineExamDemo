@@ -9,7 +9,7 @@ import com.example.onlineexamdemo.infrastructure.po.StudentInfo;
 import com.example.onlineexamdemo.utils.charts.StudentExamInfoCharts;
 import com.google.gson.Gson;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

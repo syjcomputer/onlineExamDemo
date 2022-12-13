@@ -5,7 +5,7 @@ import com.example.onlineexamdemo.application.CourseInfoService;
 import com.example.onlineexamdemo.application.GradeInfoService;
 import com.example.onlineexamdemo.infrastructure.po.CourseInfo;
 import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,8 +1,7 @@
 package com.example.onlineexamdemo.api;
 
-import com.taohan.online.exam.po.TeacherInfo;
-import com.taohan.online.exam.service.TeacherInfoService;
-import org.apache.log4j.Logger;
+import com.example.onlineexamdemo.application.TeacherInfoService;
+import com.example.onlineexamdemo.infrastructure.po.TeacherInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,7 +33,7 @@ public class TeacherInfoHandler {
 	@Autowired
 	private TeacherInfoService teacherInfoService;
 	
-	private Logger logger = Logger.getLogger(TeacherInfoHandler.class);
+	//private Logger logger = Logger.getLogger(TeacherInfoHandler.class);
 	
 	
 	/**
@@ -46,7 +45,7 @@ public class TeacherInfoHandler {
 	@RequestMapping(value="/validateTeacher", method=RequestMethod.POST)
 	public void queryTeacherExists(@RequestParam(value="account") String teacherAccount,
 			HttpServletResponse response) throws Exception {
-		logger.info("获取教师 "+teacherAccount+" 的信息");
+		//logger.info("获取教师 "+teacherAccount+" 的信息");
 
 		TeacherInfo teacherInfo = null;
 		teacherInfo = teacherInfoService.getTeacherByAccount(teacherAccount);
@@ -70,23 +69,23 @@ public class TeacherInfoHandler {
 	public String teacherLogin(@RequestParam("teacherAccount") String teacherAccount,
 			HttpServletRequest request) {
 		if (teacherAccount == null || "".equals(teacherAccount)) {
-			logger.error("教师账号为空");
+			//logger.error("教师账号为空");
 			request.setAttribute("error", "登录信息有误");
 			return "/error";
 		}
-		logger.info("教师  "+teacherAccount+" 登录");
+		//logger.info("教师  "+teacherAccount+" 登录");
 		
 		//获取当前登录教师
 		TeacherInfo teacherInfo = teacherInfoService.getTeacherByAccount(teacherAccount);
 		
 		if(teacherInfo == null){
-			logger.error("教师账号为空");
+			//logger.error("教师账号为空");
 			request.setAttribute("error", "账号不存在！");
 			return "/error";
 		}
 		String teacherPwd = request.getParameter("teacherPwd");
 		if(!teacherInfo.getTeacherPwd().equals(teacherPwd)){
-			logger.error("密码错误");
+			//logger.error("密码错误");
 			request.setAttribute("error", "密码错误！");
 			return "/error";
 		}
@@ -105,7 +104,7 @@ public class TeacherInfoHandler {
 	@RequestMapping("/selfinfo/{teacherId}")
 	public ModelAndView loginTeacherSelf(@PathVariable("teacherId") Integer teacherId) {
 		ModelAndView model = new ModelAndView();
-		logger.error("教师 "+teacherId+" 查看自己的信息");
+		//logger.error("教师 "+teacherId+" 查看自己的信息");
 		if (teacherId == null) {
 			model.setViewName("../error");
 			return model;
@@ -144,7 +143,7 @@ public class TeacherInfoHandler {
 	public ModelAndView getTeachers(
 			@RequestParam(value="startPage", required=false, defaultValue="1") Integer startPage,  //当前页码,默认第一页
 			@RequestParam(value="pageShow", required=false, defaultValue="10") Integer pageShow /*每页显示数据量，默认10条*/) {
-		logger.info("查询教师集合");
+		//logger.info("查询教师集合");
 		
 		ModelAndView model = new ModelAndView();
 		model.setViewName("admin/teachers");
@@ -181,7 +180,7 @@ public class TeacherInfoHandler {
 	 */
 	@RequestMapping(value="/teacher/{teacherId}", method=RequestMethod.GET)
 	public ModelAndView preUpdateTeacher(@PathVariable("teacherId") Integer teacherId) {
-		logger.info("预修改教师处理");
+		//logger.info("预修改教师处理");
 		
 		ModelAndView model = new ModelAndView();
 		//获取要修改教师
@@ -218,10 +217,10 @@ public class TeacherInfoHandler {
 			teacher.setAdminPower(adminPower);
 		
 		if (isUpdate != null) {  //修改
-			logger.info("修改教师 "+teacher+" 的信息");
+			//logger.info("修改教师 "+teacher+" 的信息");
 			int row = teacherInfoService.isUpdateTeacherInfo(teacher);			
 		} else {  //添加
-			logger.info("添加教师 "+teacher+" 的信息");
+			//logger.info("添加教师 "+teacher+" 的信息");
 			int row = teacherInfoService.isAddTeacherInfo(teacher);
 		}
 		
@@ -236,7 +235,7 @@ public class TeacherInfoHandler {
 	 */
 	@RequestMapping(value="/teacher/{teacherId}", method=RequestMethod.DELETE)
 	public String isDelTeacher(@PathVariable("teacherId") Integer teacherId) {
-		logger.info("删除教师 "+teacherId);
+		//logger.info("删除教师 "+teacherId);
 		
 		int row = teacherInfoService.isDelTeacherInfo(teacherId);
 		

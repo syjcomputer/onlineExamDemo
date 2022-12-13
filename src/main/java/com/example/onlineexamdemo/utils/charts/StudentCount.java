@@ -1,5 +1,6 @@
 package com.example.onlineexamdemo.utils.charts;
 
+import com.example.onlineexamdemo.infrastructure.po.ClassInfo;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.*;
