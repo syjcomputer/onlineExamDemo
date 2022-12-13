@@ -4,11 +4,10 @@ import com.example.onlineexamdemo.infrastructure.SubjectInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.SubjectInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.SubjectInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
-@Repository
+
 public class SubjectInfoResImpl implements SubjectInfoRes {
     @Autowired
     SubjectInfoMapper mapper;

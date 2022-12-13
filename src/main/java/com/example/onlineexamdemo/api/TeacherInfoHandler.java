@@ -1,7 +1,7 @@
 package com.example.onlineexamdemo.api;
 
-import com.example.onlineexamdemo.application.TeacherInfoService;
-import com.example.onlineexamdemo.infrastructure.po.TeacherInfo;
+import com.taohan.online.exam.po.TeacherInfo;
+import com.taohan.online.exam.service.TeacherInfoService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -2,7 +2,6 @@ package com.example.onlineexamdemo.infrastructure.mapper;
 
 import com.example.onlineexamdemo.infrastructure.po.StudentInfo;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.Map;
   * @version: 1.0
   */
 
-@Mapper
+@Repository
 public interface StudentInfoMapper {
 
 	public List<StudentInfo> getStudents(Map<String, Object> map);

@@ -2,7 +2,6 @@ package com.example.onlineexamdemo.infrastructure.mapper;
 
 import com.example.onlineexamdemo.infrastructure.po.StudentExamInfo;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.List;
   * @version: 1.0
   */
 
-@Mapper
+@Repository
 public interface StudentExamInfoMapper {
 
 	//后台教师根据查看某一班级下所有学生考试数量

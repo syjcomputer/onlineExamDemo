@@ -1,16 +1,14 @@
 package com.example.onlineexamdemo.application.Impl;
 
-import com.example.onlineexamdemo.application.SubjectInfoService;
 import com.example.onlineexamdemo.infrastructure.SubjectInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.SubjectInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.SubjectInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-@Service
-public class SubjectInfoServiceImpl implements SubjectInfoService {
+
+public class SubjectInfoServiceImpl implements SubjectInfoRes {
     @Autowired
     SubjectInfoRes mapper;
     @Override

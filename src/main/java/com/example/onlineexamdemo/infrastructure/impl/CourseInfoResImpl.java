@@ -4,10 +4,9 @@ import com.example.onlineexamdemo.infrastructure.CourseInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.CourseInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.CourseInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
-@Repository
+
 public class CourseInfoResImpl implements CourseInfoRes {
     @Autowired
     CourseInfoMapper mapper;
