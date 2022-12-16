@@ -79,7 +79,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
 	
 	<!-- 获取指定年级下的班级列表 -->
-	<select id="getClassByGradeId" parameterType="int" resultType="com.example..onlineexamdemo.infrastructure.po.ClassInfo">
+	<select id="getClassByGradeId" parameterType="int" resultType="com.example.onlineexamdemo.infrastructure.po.ClassInfo">
 		SELECT b.* FROM GradeInfo a INNER JOIN ClassInfo b ON a.gradeId=b.gradeId WHERE a.gradeId=#{gradeId}
 	</select>
 	
