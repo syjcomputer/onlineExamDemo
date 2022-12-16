@@ -1,9 +1,8 @@
 package com.example.onlineexamdemo.utils;
 
+import com.example.onlineexamdemo.infrastructure.po.CourseInfo;
+import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
 import com.example.onlineexamdemo.infrastructure.po.SubjectInfo;
-import com.taohan.online.exam.po.CourseInfo;
-import com.taohan.online.exam.po.GradeInfo;
-import com.taohan.online.exam.po.SubjectInfo;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -93,8 +92,12 @@ public class SubjectImportUtil {
 				} else {
 					subject.setSubjectEasy(2);						
 				}
-				subject.setCourse(new CourseInfo(courseId));
-				subject.setGrade(new GradeInfo(gradeId));
+				CourseInfo courseInfo = new CourseInfo();
+				courseInfo.setCourseId(courseId);
+				subject.setCourse(courseInfo);
+				GradeInfo gradeInfo = new GradeInfo();
+				gradeInfo.setGradeId(gradeId);
+				subject.setGrade(gradeInfo);
 				subject.setDivision(division);
 				
 				subjects.add(subject);

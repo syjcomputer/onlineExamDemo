@@ -6,10 +6,11 @@ import com.example.onlineexamdemo.infrastructure.po.ClassInfo;
 import com.example.onlineexamdemo.infrastructure.po.GradeInfo;
 import com.example.onlineexamdemo.infrastructure.po.TeacherInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
-
+@Repository
 public class ClassInfoResImpl implements ClassInfoRes {
     @Autowired
     ClassInfoMapper mapper;

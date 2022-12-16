@@ -28,7 +28,4 @@ public class CourseInfo {
 	private GradeInfo grade;
 
 
-	public CourseInfo(Integer courseId) {
-
-	}
 }

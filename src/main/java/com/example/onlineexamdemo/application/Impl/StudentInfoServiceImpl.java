@@ -1,5 +1,6 @@
 package com.example.onlineexamdemo.application.Impl;
 
+import com.example.onlineexamdemo.application.StudentInfoService;
 import com.example.onlineexamdemo.infrastructure.StudentInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.StudentInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.StudentInfo;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class StudentInfoServiceImpl implements StudentInfoRes {
+public class StudentInfoServiceImpl implements StudentInfoService {
     @Autowired
     StudentInfoRes mapper;
     @Override

@@ -1,5 +1,6 @@
 package com.example.onlineexamdemo.application.Impl;
 
+import com.example.onlineexamdemo.application.SubjectInfoService;
 import com.example.onlineexamdemo.infrastructure.SubjectInfoRes;
 import com.example.onlineexamdemo.infrastructure.mapper.SubjectInfoMapper;
 import com.example.onlineexamdemo.infrastructure.po.SubjectInfo;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class SubjectInfoServiceImpl implements SubjectInfoRes {
+public class SubjectInfoServiceImpl implements SubjectInfoService {
     @Autowired
     SubjectInfoRes mapper;
     @Override

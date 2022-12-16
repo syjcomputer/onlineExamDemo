@@ -1,5 +1,6 @@
 package com.example.onlineexamdemo.utils.charts;
 
+import com.example.onlineexamdemo.infrastructure.po.StudentExamInfo;
 import com.github.abel533.echarts.axis.CategoryAxis;
 import com.github.abel533.echarts.axis.ValueAxis;
 import com.github.abel533.echarts.code.*;
@@ -33,7 +34,8 @@ public class StudentExamInfoCharts {
 		//值轴
 		ValueAxis valueAxis = new ValueAxis();
 		//设置y轴不出现小数值
-		valueAxis.interval(1);
+		valueAxis.setMin(1);
+		//valueAxis.interval(1);
 		valueAxis.axisLabel().formatter("{value} 次");
 		option.yAxis(valueAxis);
 		
@@ -68,12 +70,14 @@ public class StudentExamInfoCharts {
 		//值轴
 		ValueAxis valueAxis = new ValueAxis();
 		//设置y轴不出现小数值
-		valueAxis.interval(1);
+		valueAxis.setMin(1);
+		//valueAxis.interval(1);
 		valueAxis.axisLabel().formatter("{value} 次");
 		//option.yAxis(valueAxis);
 		
 		ValueAxis valueAxis1 = new ValueAxis();
-		valueAxis1.interval(1);
+		valueAxis1.setMin(1);
+		//valueAxis1.interval(1);
 		valueAxis1.axisLabel().formatter("{value} 分");
 		option.yAxis(valueAxis, valueAxis1);
 		
@@ -112,7 +116,8 @@ public class StudentExamInfoCharts {
 		//值轴
 		ValueAxis valueAxis = new ValueAxis();
 		//设置y轴不出现小数值
-		valueAxis.interval(1);
+		valueAxis.setMin(1);
+		//valueAxis.interval(1);
 		valueAxis.axisLabel().formatter("{value} 分");
 		option.yAxis(valueAxis);
 		
