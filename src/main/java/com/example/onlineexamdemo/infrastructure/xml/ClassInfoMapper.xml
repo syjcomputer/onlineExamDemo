@@ -6,16 +6,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.example.onlineexamdemo.infrastructure.mapper.ClassInfoMapper">
 
-	<resultMap id="getClassesResultMap" type="com.onlineexamdemo.infrastructure.po.ClassInfo">
+	<resultMap id="getClassesResultMap" type="com.example.onlineexamdemo.infrastructure.po.ClassInfo">
 		<id column="classId" property="classId"/>
 		<result column="className" property="className"/>
 		<!-- 年级 -->
-		<association property="grade" javaType="com.onlineexamdemo.infrastructure.po.GradeInfo">
+		<association property="grade" javaType="com.example.onlineexamdemo.infrastructure.po.GradeInfo">
 			<id column="gradeId" property="gradeId"/>
 			<result column="gradeName" property="gradeName"/>
 		</association>
 		<!-- 班主任 -->
-		<association property="teacher" javaType="com.onlineexamdemo.infrastructure.po.TeacherInfo">
+		<association property="teacher" javaType="com.example.onlineexamdemo.infrastructure.po.TeacherInfo">
 			<id column="teacherId" property="teacherId"/>
 			<result column="teacherName" property="teacherName"/>
 		</association>

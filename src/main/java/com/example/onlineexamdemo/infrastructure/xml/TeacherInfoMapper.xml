@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 对应Mapper接口 的映射文件-->
-<mapper namespace="com.example.onlineexamdemo.infrastructure.po.TeacherInfoMapper">
+<mapper namespace="com.example.onlineexamdemo.infrastructure.mapper.TeacherInfoMapper">
 	
 	<resultMap type="com.example.onlineexamdemo.infrastructure.po.TeacherInfo" id="getTeacherResultMap">
 		<id column="teacherId" property="teacherId"/>

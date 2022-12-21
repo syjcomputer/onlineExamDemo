@@ -8,6 +8,8 @@ import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -20,6 +22,7 @@ import java.io.IOException;
   */
 
 @Controller
+//@RequestMapping
 public class AdminHomeHandler {
 
 	@Autowired
@@ -36,7 +39,8 @@ public class AdminHomeHandler {
 	//private Logger logger = Logger.getLogger(AdminHomeHandler.class);
 	
 	
-	@RequestMapping("/homeInfo")
+	@RequestMapping("homeInfo")
+	//@ResponseBody
 	public void homeInfo(HttpServletResponse response) throws IOException {
 		//logger.info("加载后台首页相关数据");
 
@@ -56,5 +60,7 @@ public class AdminHomeHandler {
 				"\"studentTotal\":"+studentTotal+"}";
 		
 		response.getWriter().print(json);
+
+
 	}
 }

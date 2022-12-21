@@ -58,7 +58,7 @@ public class ClassInfoHandler {
 	 * @param classId  班级编号
 	 * @return
 	 */
-	@RequestMapping(value="/classes", method=RequestMethod.GET)
+	@RequestMapping(value="classes", method=RequestMethod.GET)
 	public ModelAndView getClasses(@RequestParam(value="gradeId", required=false) Integer gradeId,
 			@RequestParam(value="className", required=false) String className,
 			@RequestParam(value="classId", required=false) Integer classId) {

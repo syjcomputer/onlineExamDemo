@@ -37,7 +37,7 @@ public class ExamPaperInfo {
 	@TableField
 	private int examPaperEasy;
 
-	@TableField
+	//@TableField
 	private GradeInfo grade;
 
 }

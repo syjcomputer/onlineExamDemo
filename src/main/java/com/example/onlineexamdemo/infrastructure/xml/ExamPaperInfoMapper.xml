@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.onlineexamdemo.infrastructure.mapper.ExamPaperInfoMapper">
-	
+
 	<resultMap type="com.example.onlineexamdemo.infrastructure.po.ExamPaperInfo" id="queryExamPaper">
 		<id column="examPaperId" property="examPaperId"/>
 		<result column="examPaperName" property="examPaperName"/>
@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<result column="gradeName" property="gradeName"/>
 		</association>
 	</resultMap>
-	
+
 	<parameterMap type="java.util.Map" id="getExamPapersParameterMap">
 		<parameter property="examPaper" resultMap="queryExamPaper"/>
 		<parameter property="startIndex" resultMap="queryExamPaper"/>
