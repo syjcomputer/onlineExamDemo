@@ -20,26 +20,30 @@ public class GradeInfoResImpl implements GradeInfoRes {
     GradeInfoMapper mapper;
 
     //获取所有年级
-
+    @Override
     public List<GradeInfo> getGrades(){
         return mapper.getGrades();
     }
 
+    @Override
     //根据编号获取年级
     public GradeInfo getGradeById(int gradeId){
         return mapper.getGradeById(gradeId);
     }
 
+    @Override
     //添加年级
     public int isAddGrade(GradeInfo grade){
         return mapper.isAddGrade(grade);
     }
 
+    @Override
     //删除年级
     public int isDelGrade(int gradeId){
         return mapper.isDelGrade(gradeId);
     }
 
+    @Override
     //修改年级
     public int isUpdateGrade(GradeInfo grade){
         return mapper.isUpdateGrade(grade);

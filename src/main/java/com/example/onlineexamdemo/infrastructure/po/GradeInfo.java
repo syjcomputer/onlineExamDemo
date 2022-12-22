@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
   */
 
 @Data
+@Component
 public class GradeInfo {
 
 	@TableField
@@ -20,6 +21,10 @@ public class GradeInfo {
 
 	@TableField
 	private String gradeName;
+
+//	public GradeInfo(Integer gradeId) {
+//
+//	}
 
 //	public Integer getGradeId() {
 //		return gradeId;
