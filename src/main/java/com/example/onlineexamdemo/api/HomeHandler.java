@@ -3,6 +3,7 @@ package com.example.onlineexamdemo.api;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
@@ -16,12 +17,11 @@ import java.io.IOException;
  */
 @Controller
 public class HomeHandler {
-    @RequestMapping("home")
-    public ModelAndView homeInfo(HttpServletResponse response){
-        System.out.print("首页加载");
-        ModelAndView model = new ModelAndView();
-        model.setViewName("admin/home.jsp");
 
-        return model;
+    @RequestMapping("/jumpHome")
+    public String jumpHome(ModelAndView modelAndView){
+        System.out.print("首页加载");
+//        modelAndView.setViewName("test/test.jsp");
+        return "index";
     }
 }

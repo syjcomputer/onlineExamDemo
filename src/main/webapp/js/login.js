@@ -220,7 +220,7 @@ $(function() {
 						}
 					});
 					setTimeout(function(){
-						window.location.href = 'reception/login.jsp';
+						window.location.href = '../reception/login.jsp';
 					},1000);
 				} else {
 					alert("注册失败");

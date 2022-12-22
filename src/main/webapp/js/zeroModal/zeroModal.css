@@ -17,7 +17,7 @@
 }
 
 .zeromodal-loading1 {
-    background: url(./img/loading1.gif);
+    background: url(img/loading1.gif);
     width: 50px;
     height: 50px;
     position: absolute;
@@ -26,7 +26,7 @@
 }
 
 .zeromodal-loading2 {
-    background: url(./img/loading2.gif);
+    background: url(img/loading2.gif);
     width: 37px;
     height: 37px;
     position: absolute;
@@ -116,7 +116,7 @@
 }
 
 .zeromodal-max {
-    background: url(./img/max.png);
+    background: url(img/max.png);
     width: 16px;
     height: 16px;
     position: relative;
@@ -134,7 +134,7 @@
 }
 
 .zeromodal-min {
-    background: url(./img/min.png);
+    background: url(img/min.png);
     width: 16px;
     height: 16px;
     position: relative;
@@ -180,7 +180,7 @@
 }
 
 .zeromodal-close {
-    background: url(./img/close.png);
+    background: url(img/close.png);
     width: 16px;
     height: 16px;
     position: relative;

@@ -7,7 +7,7 @@ server:
     context-path: /onlineexamdemo
     jsp:
       init-parameters:
-        development: true
+        mapped: false
 
 
 spring:
@@ -53,20 +53,14 @@ spring:
 
 
   #  下面这个mvc和web配置，是为了使请求不存在的url时，能够按照通用返回模板返回（在全局异常处理器捕获NoHandlerFoundException即可）
-  view:
-    prefix: admin/
-    suffix: .jsp
   mvc:
     view:
-      prefix: admin/
+      prefix: / #/admin/
       suffix: .jsp
     #throw-exception-if-no-handler-found: true
   web:
     resources:
       add-mappings: true
-
-  thymeleaf:
-    enabled: false
 
 #  mapper对应的xml文件存放路径，开启 mybatis 下划线命名法自动到驼峰命名法映射
 mybatis-plus:
