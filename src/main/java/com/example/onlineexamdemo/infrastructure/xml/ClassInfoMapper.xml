@@ -65,7 +65,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT * FROM ClassInfo a
 		LEFT JOIN TeacherInfo b ON a.teacherId=b.teacherId
 		LEFT JOIN GradeInfo c ON a.gradeId=c.gradeId
-		WHERE classId=#{classId}
+		WHERE a.classId=#{classId}
 	</select>
 	
 	<!-- 根据当前班级班主任编号获取班级信息 -->

@@ -37,7 +37,7 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
 								<li>
-									 <a href="index.jsp">首页</a>
+									 <a href="admin/index.jsp">首页</a>
 								</li>
 								<li>
 									 <a id="examCenter-link" target="home" style="cursor: pointer;" href="willexams?classId=${sessionScope.loginStudent.classInfo.classId }&gradeId=${sessionScope.loginStudent.grade.gradeId }&studentId=${sessionScope.loginStudent.studentId }" studentId="${sessionScope.loginStudent.studentId }">考试中心</a>

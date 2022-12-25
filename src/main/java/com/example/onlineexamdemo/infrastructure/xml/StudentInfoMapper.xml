@@ -62,7 +62,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<update id="isUpdateStudent" parameterType="com.example.onlineexamdemo.infrastructure.po.StudentInfo">
 		UPDATE StudentInfo SET
-		studentName=#{studentName}, studentAccount=#{studentAccount}, studentPwd=#{studentPwd}, classId=#{classInfo.classId}
+		studentName=#{studentName}, studentAccount=#{studentAccount}, studentPwd=#{studentPwd}, classId=#{classInfo.classId}, gardeId=#{classInfo.grade.gradeId}
 		WHERE studentId=#{studentId}
 	</update>
 	
@@ -71,7 +71,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</delete>
 	
 	<insert id="isAddStudent" parameterType="com.example.onlineexamdemo.infrastructure.po.StudentInfo">
-		INSERT INTO StudentInfo VALUES(NULL, #{studentName}, #{studentAccount}, #{studentPwd}, #{classInfo.classId})
+		INSERT INTO StudentInfo VALUES(NULL, #{studentName}, #{studentAccount}, #{studentPwd}, #{classInfo.classId}, #{classInfo.grade.gradeId})
 	</insert>
 	
 	<select id="getStudentTotal" resultType="int">

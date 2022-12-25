@@ -37,6 +37,8 @@ public class StudentInfoHandler {
 	@Autowired
 	private ClassInfoService classInfoService;
 	@Autowired
+	private GradeInfoService gradeInfoService;
+	@Autowired
 	private ExamSubjectMiddleInfoService examSubjectMiddleInfoService;
 	@Autowired
 	private ExamHistoryPaperService examHistoryPaperService;
@@ -307,12 +309,14 @@ public class StudentInfoHandler {
 		student.setStudentName(studentName);
 		student.setStudentAccount(studentAccount);
 		student.setStudentPwd(studentPwd);
-		classInfo.setClassId(classId);
-		student.setClassInfo(classInfo);
+		ClassInfo classInfo1 = classInfoService.getClassById(classId);
+		student.setClassInfo(classInfo1);
+		GradeInfo grade = classInfo1.getGrade();
+		student.setGrade(grade);
 //		logger.info("学生注册 "+student);
 		int row = studentInfoService.isAddStudent(student);
 		
-		response.getWriter().print("t");
+		//response.getWriter().print("t");
 	}
 	
 	/**

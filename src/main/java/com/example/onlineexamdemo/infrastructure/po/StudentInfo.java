@@ -28,6 +28,4 @@ public class StudentInfo {
 	@TableField
 	private GradeInfo grade;
 
-
-
 }
